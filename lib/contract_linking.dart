@@ -9,11 +9,11 @@ import 'package:web_socket_channel/io.dart';
 
 class ContractLinking extends ChangeNotifier {
   /// RPC => Remote Procedure Calls
-  final String _rpcUrl = 'http://192.168.0.110:7545';
+  final String _rpcUrl = 'http://192.168.0.106:7545';
   // WS => Web Socket
-  final String _wsUrl = 'ws://192.168.0.110:7545';
+  final String _wsUrl = 'ws://192.168.0.106:7545';
   final String _privateKey =
-      '8c7f8c23a4e0d679bec2ec7c235bcaa9dea4667208ec6aa7c445aade5e37060a';
+      '88768c7fdef8b3af1022ca5ef69c2c6b24a618b11e687c10ddac9aac332e8404';
   Web3Client? _web3client;
   bool isLoading = false;
 

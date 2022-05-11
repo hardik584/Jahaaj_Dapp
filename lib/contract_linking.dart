@@ -68,7 +68,6 @@ class ContractLinking extends ChangeNotifier {
   void getMessage() async {
     final _myMessage = await _web3client!
         .call(contract: _contract!, function: _message!, params: []);
-    print(_myMessage);
     deployedName = _myMessage[0];
     isLoading = false;
     notifyListeners();

@@ -10,7 +10,7 @@ class HelloPage extends StatefulWidget {
 }
 
 class _HelloPageState extends State<HelloPage> {
-  TextEditingController? _messageController;
+  final TextEditingController? _messageController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -38,9 +38,14 @@ class _HelloPageState extends State<HelloPage> {
                         const SizedBox(height: 20),
                         ElevatedButton(
                           onPressed: () {
-                            contractLink
-                                .setMessage(_messageController?.text ?? '');
+                            contractLink.setMessage(
+                                _messageController?.text ?? '@Blank@');
                             _messageController?.clear();
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                content: Text('Your message sent successfully'),
+                              ),
+                            );
                           },
                           child: const Text(
                             'Set Message',

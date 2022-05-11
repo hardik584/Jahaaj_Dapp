@@ -13,6 +13,6 @@ contract HelloWorld {
     }
 }
 
-//  truffle compile
-//  truffle migrate
+// truffle compile
+// truffle migrate
 // truffle test
